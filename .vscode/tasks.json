@@ -1,0 +1,111 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update System Design Count",
+            "type": "shell",
+            "command": "count=$(find system-design -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[)[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
+            "label": "Update Software Design Count",
+            "type": "shell",
+            "command": "count=$(find software-design -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update System Design Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Code Design Count",
+            "type": "shell",
+            "command": "count=$(find 'code-design' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Software Design Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Gen AI Count",
+            "type": "shell",
+            "command": "count=$(find 'gen-ai' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Code Design Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Machine Learning Count",
+            "type": "shell",
+            "command": "count=$(find 'machine-learning' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, [0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Gen AI Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Deep Learning Count",
+            "type": "shell",
+            "command": "count=$(find 'deep-learning' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Machine Learning Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update MLOps Count",
+            "type": "shell",
+            "command": "count=$(find 'mlops' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Deep Learning Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Data Engineering Count",
+            "type": "shell",
+            "command": "count=$(find 'data-engineering' -type f 2>/dev/null | wc -l | xargs); sed -i -E \"s/((line|bar) \\[[0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, [0-9]+, )[0-9]+/\\1$count/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update MLOps Count"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Update Y-Axis Scale",
+            "type": "shell",
+            "command": "max=$(grep 'bar \\[' README.md | sed -E 's/.*bar \\[(.*)\\].*/\\1/' | tr ',' '\\n' | sort -nr | head -n1); new_max=$((max + 1)); sed -i -E \"s/(y-axis \\\"[^\\\"]*\\\" )[0-9]+ --> [0-9]+$/\\10 --> $new_max/\" README.md",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "Update Data Engineering Count"
+            ],
+            "dependsOrder": "sequence"
+        }
+    ]
+}
