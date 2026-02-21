@@ -4,8 +4,8 @@
 xychart
     title "Successful Programmer Chart"
     x-axis ["SysD", "SofD", "CodD", "Gen AI", "ML", "DL", "MLOps", "DataEng"]
-    y-axis "Number of written files" 0 --> 2
-    bar [1, 0, 1, 0, 0, 0, 0, 0]
+    y-axis "Number of written files" 0 --> 5
+    bar [1, 0, 4, 0, 0, 0, 0, 0]
 ```
 
 ## System Design
