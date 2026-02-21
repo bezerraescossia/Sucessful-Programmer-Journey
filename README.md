@@ -1,11 +1,13 @@
 # Succesful Programmer
 
+## Programmer Skills
+
 ```mermaid
-xychart
+xychart horizontal
     title "Successful Programmer Chart"
-    x-axis ["SysD", "SofD", "CodD", "Gen AI", "ML", "DL", "MLOps", "DataEng"]
-    y-axis "Number of written files" 0 --> 5
-    bar [1, 0, 4, 0, 0, 0, 0, 0]
+    x-axis ["Python", "Docker", "FastAPI", "Pydantic"]
+    y-axis "Number of written lines" 0 --> 348
+    bar [347, 0, 0, 182]
 ```
 
 ## System Design

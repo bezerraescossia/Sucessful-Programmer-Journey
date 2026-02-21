@@ -1,1 +1,0 @@
-# TODO Develop inheritance codes

@@ -1,0 +1,15 @@
+[project]
+name = "successful-programmer-journey"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "datamodel-code-generator>=0.54.0",
+    "email-validator>=2.3.0",
+    "ipykernel>=7.2.0",
+    "pydantic>=2.12.5",
+    "python-dateutil>=2.9.0.post0",
+    "pytz>=2025.2",
+    "requests>=2.32.5",
+]
