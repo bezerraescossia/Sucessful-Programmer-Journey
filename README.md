@@ -5,7 +5,7 @@ xychart
     title "Successful Programmer Chart"
     x-axis ["SysD", "SofD", "CodD", "Gen AI", "ML", "DL", "MLOps", "DataEng"]
     y-axis "Number of written files" 0 --> 2
-    bar [1, 0, 0, 0, 0, 0, 0, 0]
+    bar [1, 0, 1, 0, 0, 0, 0, 0]
 ```
 
 ## System Design
@@ -30,6 +30,10 @@ xychart
 3. Data Structures and Algorithms
 4. Code Review Best Practices
 5. TDD (Test-Driven Development)
+6. Object-Oriented Programming
+   1. Inheritance
+   2. Encapsulation
+   3. Polymorphismo
 
 ## Gen AI
 
