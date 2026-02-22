@@ -6,8 +6,10 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "datamodel-code-generator>=0.54.0",
+    "dotenv>=0.9.9",
     "email-validator>=2.3.0",
     "ipykernel>=7.2.0",
+    "langchain-openai>=1.1.10",
     "pydantic>=2.12.5",
     "python-dateutil>=2.9.0.post0",
     "pytz>=2025.2",

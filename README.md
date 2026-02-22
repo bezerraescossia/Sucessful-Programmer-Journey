@@ -7,7 +7,7 @@ xychart horizontal
     title "Successful Programmer Chart"
     x-axis ["Python", "Docker", "FastAPI", "Pydantic"]
     y-axis "Number of written lines" 0 --> 348
-    bar [347, 0, 0, 182]
+    bar [347, 0, 0, 257]
 ```
 
 ## System Design
