@@ -1,13 +1,50 @@
 # Succesful Programmer
 
-## Programmer Skills
+## Folder Structure
+
+.
+├── 00_Meta/                # Management & Planning
+│   ├── Inbox/              # Rapid capture (sort these later)
+│   ├── Roadmap/            # T-shaped career tracking & Goals
+│   └── Templates/          # Foam/Obsidian templates (Daily Note, Paper Summary)
+│
+├── 01_Foundations/         # The "Horizontal" Bar (Breadth)
+│   ├── Computer_Science/   # Algorithms, Data Structures
+│   ├── Mathematics/        # Linear Algebra, Stats for ML
+│   └── System_Design/      # Scalability, Microservices, SDLC
+│
+├── 02_Software_Eng/        # The Tools of the Trade
+│   ├── Python/             # Patterns, Pytest, Asyncio
+│   ├── DevOps/             # Docker, Kubernetes, GitLab_CI
+│   └── Cloud_Infra/        # AWS (S3, OpenSearch, Bedrock)
+│
+├── 03_Machine_Learning/    # AI Core
+│   ├── Classical_ML/       # Regression, Trees, Scikit-learn
+│   ├── NLP/                # Transformers, Embeddings
+│   └── MLOps/              # Weights & Biases, MLflow, Deployment
+│
+├── 04_Specialization/      # The "Vertical" Bar (Deep Dive)
+│   ├── RAG_Systems/        # Vector DBs, Reranking, Retrieval
+│   ├── LLM_Agents/         # ReAct, Tool-use, Orchestration
+│   └── Eval_Frameworks/    # Ragas, DeepEval, Benchmarking
+│
+├── 05_Projects/            # Applied Knowledge
+│   ├── Active/             # Current builds (e.g., ANBIMA RAG)
+│   └── Archive/            # Completed or paused experiments
+│
+└── 06_Resources/           # External Inputs
+    ├── Papers/             # Arxiv summaries
+    ├── Books/              # Notes from SDLC/Design Pattern books
+    └── Courses/            # Certifications & Tutorials
+
+## Software Engineering
 
 ```mermaid
 xychart horizontal
     title "Successful Programmer Chart"
-    x-axis ["Python", "Docker", "FastAPI", "Pydantic"]
-    y-axis "Number of written lines" 0 --> 348
-    bar [347, 0, 0, 257]
+    x-axis ["Programming", "DevOps", "Infrastructure"]
+    y-axis "Number of written lines" 0 --> 900
+    bar [899, 191, 0]
 ```
 
 ## System Design
