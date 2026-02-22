@@ -1,9 +1,8 @@
 # Extracting information using LLM
-from openai import OpenAI
 from typing import Any
 from pydantic import (
     BaseModel, Field, field_validator,
-    computed_field, ValidationError,
+    computed_field,
 )
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
@@ -47,7 +46,7 @@ data: dict["str", Any] = {
 
 # This is a MeetingSummary object, NOT a string!
 llm: ChatOpenAI = ChatOpenAI(model="gpt-4o", temperature=0)
-structured_llm: Runnable[Any, MeetingSummary] = llm.with_structured_output(MeetingSummary)
+structured_llm: Runnable[Any, MeetingSummary] = llm.with_structured_output(MeetingSummary) # type: ignore
 result = structured_llm.invoke("Sarah needs to buy milk and John needs to fix the sink.")
 
 
