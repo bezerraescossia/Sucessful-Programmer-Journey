@@ -34,3 +34,6 @@ created: 2026-02-22
     ```
 
 - `RUN` e `CMD` parecem semelhantes, porém existe uma diferença crucial! Enquanto que `RUN` é utilizado na construção da imagem, o comando `CMD` é um comando executado no lançamento do *container*. Portanto, é necessário prestar atenção se o comando que você quer passar é de construção de imagem ou de execução de *container*.
+- Por padrão `docker run` inicia um novo container, mesmo que já exista um container associado a imagem.
+- Por padrão `docker run` executa em *attach* mode, enquanto que `docker start` executa em *dettach*
+- Uma imagem somente poderá ser removida por `docker rmi image_name` se não houver nenhum container dessa imagem, mesmo que pausado (stop). Portanto, para remover essa imagem é preciso primeiro remover os containers a ele associado e depois remover a imagem.
