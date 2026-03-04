@@ -44,7 +44,7 @@ xychart horizontal
     title "Successful Programmer Chart"
     x-axis ["Programming", "DevOps", "Infrastructure"]
     y-axis "Number of written lines" 0 --> 900
-    bar [899, 246, 0]
+    bar [899, 594, 0]
 ```
 
 ## System Design

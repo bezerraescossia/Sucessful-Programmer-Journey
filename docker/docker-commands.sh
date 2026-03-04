@@ -56,5 +56,25 @@ docker image prune
 # Run an image that is automatically removed after stopped
 docker run -p 3000:80 -d --rm image_name
 
-# 
+# Inspect docker image
 docker image inspect image_name
+
+# Run an image and add a name to the container
+docker run -p 3000:80 -d --rm --name container_name image_name
+
+# Add name:tag to a docker image
+docker build -t image_name:tag
+
+# Share a docker image
+docker push image_name
+docker push host:image_name
+
+# Use a docker image
+docker pull image_name
+docker pull host:image_name
+
+# Rename/retag an image
+docker tag old_image_name:old_tag repository/new_image_name:new_tag
+
+# Log into a docker hub account
+docker login

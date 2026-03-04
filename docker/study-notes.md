@@ -37,3 +37,4 @@ created: 2026-02-22
 - Por padrão `docker run` inicia um novo container, mesmo que já exista um container associado a imagem.
 - Por padrão `docker run` executa em *attach* mode, enquanto que `docker start` executa em *dettach*
 - Uma imagem somente poderá ser removida por `docker rmi image_name` se não houver nenhum container dessa imagem, mesmo que pausado (stop). Portanto, para remover essa imagem é preciso primeiro remover os containers a ele associado e depois remover a imagem.
+- Containers tem nomes, enquanto que imagens tem repositório:tags.
